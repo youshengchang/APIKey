@@ -1,17 +1,17 @@
 package com.example.gmapsapp;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.maps.GoogleMap;
-
-import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.GoogleMap;
+
+public class MainActivity extends FragmentActivity {
 	
 	private static final int GPS_ERRORDIALOG_REQUEST = 9001;
 	GoogleMap mMap;
@@ -22,8 +22,11 @@ public class MainActivity extends Activity {
 		if(servicesOK()){
 			Toast.makeText(this, "Ready to map!", Toast.LENGTH_LONG).show();
 			Log.d("MainActivity","Ready to Map");
-		}
-		setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_map);
+		}else{
+            setContentView(R.layout.activity_main);
+        }
+
 	}
 
 	@Override
