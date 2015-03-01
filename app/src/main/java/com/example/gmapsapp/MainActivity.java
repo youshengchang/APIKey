@@ -15,7 +15,7 @@ public class MainActivity extends FragmentActivity {
 	
 	private static final int GPS_ERRORDIALOG_REQUEST = 9001;
 	GoogleMap mMap;
-
+    //adding the map
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
